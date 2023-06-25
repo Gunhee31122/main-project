@@ -38,11 +38,35 @@ css가 아니라 html에서 직접 넣고 싶으면 이미지를 import로 경�
 background-size : cover;
 background-position : center; 도 추가
 
+서로 다른 파일로 만든 컴포넌트 사이에서 state를 공유할 필요가 있음
 
+state를 전송할때는 props 문법을 사용
+-> 부모 컴포넌트 안에 자식 컴포넌트 호출하는 부분에서 setCategoryVision= {setCategoryVision} 이런식으로 전송
+여기서 state 자체랑 state 변경함수를 모두 전송할 수 있음
+
+자식 컴포넌트 선언부에서 파라미터로 props 전송
+사용할떄 props.~~~ 로 사용
+
+
+onClick: 요소를 클릭할 때 발생하는 이벤트입니다.
+onMouseEnter: 마우스가 요소 위로 진입할 때 발생하는 이벤트입니다.
+onMouseLeave: 마우스가 요소를 벗어날 때 발생하는 이벤트입니다.
+onMouseOver: 마우스가 요소 위를 움직일 때 발생하는 이벤트입니다.
+onMouseOut: 마우스가 요소를 벗어날 때 발생하는 이벤트입니다.
+onMouseDown: 마우스 버튼을 누를 때 발생하는 이벤트입니다.
+onMouseUp: 마우스 버튼을 놓을 때 발생하는 이벤트입니다.
+onMouseMove: 마우스가 움직일 때 발생하는 이벤트입니다.
+
+
+이벤트 핸들러로 스타일 바꾸고 싶으면 e.target.style. = ' ' 이런식
+
+
+마우스 치우면 카테고리 박스가 안 보여야 하는데 잘 안됨
+-> 옆에 있는 박스가 같이 안 사라짐  =>  visibility 컨트롤을 다른 변수로 했었음 이걸 App.js에 몰아주고 props로 전송해서 컨트롤 하여 해결함
 
 
 ++ 변수명을 좀 더 체계적으로 정리해야 함 / 스타일을 부여하는 방식을 좀 더 일관되게 정해놓을 필요가 있어보임
-++
+++ state는 보통 App.js에서 선언하고 전송하는게 편의성이 좋고 특별히 특정 컴포넌트에서만 쓰는 경우에는 거기서 선언
 ++
 ++
 
